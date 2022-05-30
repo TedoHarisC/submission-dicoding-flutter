@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:submission_dicoding_tedo_hc/pages/onboarding_page.dart';
+import 'package:submission_dicoding_tedo_hc/pages/sign_in_page.dart';
 import 'package:submission_dicoding_tedo_hc/pages/splash_page.dart';
 
 void main() {
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const SplashPage(),
         '/onboarding': (context) => const OnBoardingPage(),
+        '/signin': (context) => const SignInPage(),
       },
     );
   }
