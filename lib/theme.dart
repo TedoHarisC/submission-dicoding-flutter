@@ -5,6 +5,7 @@ Color kGreenColor = const Color(0xff24C690);
 Color kBlackColor = const Color(0xff000000);
 Color kGreyColor = const Color(0xff89807A);
 Color kCyanColor = const Color(0xff24C6C6);
+Color kWhiteColor = const Color(0xffFFFFFF);
 
 FontWeight light = FontWeight.w300;
 FontWeight regular = FontWeight.w400;
@@ -16,14 +17,18 @@ TextStyle blackTextStyle = GoogleFonts.poppins(
   color: kBlackColor,
 );
 
-TextStyle greenTextStyle = GoogleFonts.nunito(
+TextStyle greenTextStyle = GoogleFonts.poppins(
   color: kGreenColor,
 );
 
-TextStyle greyTextStyle = GoogleFonts.nunito(
+TextStyle greyTextStyle = GoogleFonts.poppins(
   color: kGreyColor,
 );
 
-TextStyle cyanTextStyle = GoogleFonts.nunito(
+TextStyle cyanTextStyle = GoogleFonts.poppins(
   color: kCyanColor,
+);
+
+TextStyle whiteTextStyle = GoogleFonts.poppins(
+  color: kWhiteColor,
 );
