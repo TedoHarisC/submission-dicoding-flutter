@@ -5,7 +5,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:submission_dicoding_tedo_hc/cubit/page_cubit.dart';
 import 'package:submission_dicoding_tedo_hc/pages/home_page.dart';
 import 'package:submission_dicoding_tedo_hc/pages/notification_page.dart';
-import 'package:submission_dicoding_tedo_hc/pages/sign_in_page.dart';
+import 'package:submission_dicoding_tedo_hc/pages/profil_page.dart';
+import 'package:submission_dicoding_tedo_hc/pages/wishlist_page.dart';
 import 'package:submission_dicoding_tedo_hc/theme.dart';
 import '../widgets/custom_button_navigation_item.dart';
 
@@ -21,9 +22,9 @@ class MainPage extends StatelessWidget {
         case 1:
           return const NotificationPage();
         case 2:
-          return const SignInPage();
+          return const WishlistPage();
         case 3:
-          return const SignInPage();
+          return const ProfilPage();
         default:
           return const HomePage();
       }

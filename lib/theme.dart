@@ -8,6 +8,7 @@ Color kCyanColor = const Color(0xff24C6C6);
 Color kWhiteColor = const Color(0xffFFFFFF);
 Color kTransparentColor = Colors.transparent;
 Color kLightBlueColor = const Color(0xffBECCE3);
+Color kLightGreyColor = const Color(0xffF0F0F0);
 
 FontWeight light = FontWeight.w300;
 FontWeight regular = FontWeight.w400;
