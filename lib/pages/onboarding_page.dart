@@ -106,7 +106,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                 TextButton(
                   onPressed: () {
                     if (currentIndex == 2) {
-                      Navigator.pushNamed(context, '/home');
+                      Navigator.pushNamed(context, '/main');
                     } else {
                       controller.nextPage();
                     }
