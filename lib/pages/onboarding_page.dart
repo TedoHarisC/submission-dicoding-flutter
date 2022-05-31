@@ -80,7 +80,8 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                       height: 10,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: currentIndex == 0 ? kBlackColor : kGreenColor,
+                        color:
+                            currentIndex == 0 ? kGreenColor : kLightGreyColor,
                       ),
                     ),
                     const SizedBox(width: 10),
@@ -89,7 +90,8 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                       height: 10,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: currentIndex == 1 ? kBlackColor : kGreenColor,
+                        color:
+                            currentIndex == 1 ? kGreenColor : kLightGreyColor,
                       ),
                     ),
                     const SizedBox(width: 10),
@@ -98,7 +100,8 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                       height: 10,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: currentIndex == 2 ? kBlackColor : kGreenColor,
+                        color:
+                            currentIndex == 2 ? kGreenColor : kLightGreyColor,
                       ),
                     ),
                   ],

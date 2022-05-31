@@ -29,7 +29,7 @@ class CustomButtonNavigationItem extends StatelessWidget {
             height: 24,
             color: context.read<PageCubit>().state == index
                 ? kGreenColor
-                : kGreyColor,
+                : kLightBlueColor,
           ),
           Container(
             width: 30,

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:submission_dicoding_tedo_hc/theme.dart';
+import 'package:submission_dicoding_tedo_hc/widgets/schedule_tile.dart';
+import 'package:submission_dicoding_tedo_hc/widgets/travel_card.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -52,36 +54,203 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             const SizedBox(height: 23),
-            Container(
-              width: 255,
-              height: 54,
-              decoration: BoxDecoration(
-                color: kLightGreyColor,
-                borderRadius: BorderRadius.circular(21),
-              ),
-              child: Container(
-                margin: const EdgeInsets.symmetric(
-                  vertical: 20,
-                  horizontal: 21,
-                ),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    // ignore: prefer_const_constructors
-                    Icon(
-                      Icons.search,
-                      size: 14,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Container(
+                  width: 235,
+                  height: 54,
+                  decoration: BoxDecoration(
+                    color: kLightGreyColor,
+                    borderRadius: BorderRadius.circular(21),
+                  ),
+                  child: Container(
+                    margin: const EdgeInsets.symmetric(
+                      vertical: 20,
+                      horizontal: 21,
                     ),
-                    const SizedBox(width: 11),
-                    Text(
-                      'Search Places',
-                      style: greyTextStyle.copyWith(
-                        fontSize: 11,
-                      ),
-                    )
-                  ],
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        // ignore: prefer_const_constructors
+                        Icon(
+                          Icons.search,
+                          size: 14,
+                        ),
+                        const SizedBox(width: 11),
+                        Text(
+                          'Search Places',
+                          style: greyTextStyle.copyWith(
+                            fontSize: 11,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
                 ),
-              ),
+                const SizedBox(width: 12),
+                Image.asset(
+                  'assets/btn_filter.png',
+                  width: 72,
+                  height: 72,
+                ),
+              ],
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget travelPlace() {
+      return Container(
+        margin: const EdgeInsets.only(top: 23),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Travel Places',
+                  style: blackTextStyle.copyWith(
+                    fontSize: 18,
+                    fontWeight: semiBold,
+                  ),
+                ),
+                Text(
+                  'Show more >',
+                  style: greyTextStyle.copyWith(
+                    fontSize: 11,
+                  ),
+                )
+              ],
+            ),
+            const SizedBox(height: 17),
+            Row(
+              children: [
+                SizedBox(
+                  width: 18,
+                  child: RotatedBox(
+                    quarterTurns: 3,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          height: 18,
+                          margin: const EdgeInsets.only(right: 37),
+                          child: Text(
+                            'All',
+                            style: blackTextStyle.copyWith(
+                              fontSize: 12,
+                              fontWeight: bold,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          height: 18,
+                          margin: const EdgeInsets.only(right: 37),
+                          child: Text(
+                            'Latest',
+                            style: blackTextStyle.copyWith(
+                              fontSize: 12,
+                              fontWeight: bold,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          height: 18,
+                          margin: const EdgeInsets.only(right: 28),
+                          child: Text(
+                            'Popular',
+                            style: blackTextStyle.copyWith(
+                              fontSize: 12,
+                              fontWeight: bold,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 30),
+                Expanded(
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: const [
+                        TravelCard(
+                          imageUrl: 'assets/destination_1.png',
+                          price: '750',
+                          name: 'City Rome',
+                          nation: 'Italy',
+                          day: '5 Days',
+                        ),
+                        TravelCard(
+                          imageUrl: 'assets/destination_2.png',
+                          price: '850',
+                          name: 'Santoriny Island',
+                          nation: 'Greece',
+                          day: '5 Days',
+                        ),
+                        TravelCard(
+                          imageUrl: 'assets/destination_3.png',
+                          price: '890',
+                          name: 'Mount ALbrus',
+                          nation: 'Italy',
+                          day: '7 Days',
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget mySchedule() {
+      return Container(
+        margin: const EdgeInsets.only(top: 16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'My Schedule',
+                  style: blackTextStyle.copyWith(
+                    fontSize: 18,
+                    fontWeight: semiBold,
+                  ),
+                ),
+                Text(
+                  'Show more >',
+                  style: greyTextStyle.copyWith(
+                    fontSize: 11,
+                  ),
+                )
+              ],
+            ),
+            const SizedBox(height: 23),
+            const ScheduleTile(
+              imageUrl: 'assets/destination_3.png',
+              name: 'Mount ALbrus',
+              nation: 'Italy',
+            ),
+            const SizedBox(height: 10),
+            const ScheduleTile(
+              imageUrl: 'assets/destination_4.png',
+              name: 'Burj Khalifa',
+              nation: 'Dubai',
+            ),
+            const SizedBox(height: 10),
+            const ScheduleTile(
+              imageUrl: 'assets/destination_2.png',
+              name: 'Santoriny Island',
+              nation: 'Greece',
             ),
           ],
         ),
@@ -93,11 +262,14 @@ class _HomePageState extends State<HomePage> {
         left: 20,
         right: 20,
         top: 45,
+        bottom: 100,
       ),
       child: ListView(
         children: [
           header(),
           searchArea(),
+          travelPlace(),
+          mySchedule(),
         ],
       ),
     );

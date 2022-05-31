@@ -35,3 +35,7 @@ TextStyle cyanTextStyle = GoogleFonts.poppins(
 TextStyle whiteTextStyle = GoogleFonts.poppins(
   color: kWhiteColor,
 );
+
+TextStyle lightGreyTextStyle = GoogleFonts.poppins(
+  color: kGreyColor,
+);
