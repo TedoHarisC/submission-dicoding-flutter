@@ -109,7 +109,8 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                 TextButton(
                   onPressed: () {
                     if (currentIndex == 2) {
-                      Navigator.pushNamed(context, '/main');
+                      Navigator.pushNamedAndRemoveUntil(
+                          context, '/sign-in', (Route<dynamic> route) => false);
                     } else {
                       controller.nextPage();
                     }
