@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:submission_dicoding_tedo_hc/cubit/page_cubit.dart';
+import 'package:submission_dicoding_tedo_hc/cubit/travel_cubit.dart';
 import 'package:submission_dicoding_tedo_hc/pages/home_page.dart';
 import 'package:submission_dicoding_tedo_hc/pages/main_page.dart';
 import 'package:submission_dicoding_tedo_hc/pages/notification_page.dart';
@@ -23,6 +24,9 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) => PageCubit(),
+        ),
+        BlocProvider(
+          create: (context) => TravelCubit(),
         ),
       ],
       child: MaterialApp(

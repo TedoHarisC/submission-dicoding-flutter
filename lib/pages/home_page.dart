@@ -1,5 +1,10 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:submission_dicoding_tedo_hc/cubit/travel_cubit.dart';
 import 'package:submission_dicoding_tedo_hc/theme.dart';
+import 'package:submission_dicoding_tedo_hc/widgets/menu_travel_navigation_item.dart';
 import 'package:submission_dicoding_tedo_hc/widgets/schedule_tile.dart';
 import 'package:submission_dicoding_tedo_hc/widgets/travel_card.dart';
 
@@ -72,7 +77,6 @@ class _HomePageState extends State<HomePage> {
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        // ignore: prefer_const_constructors
                         Icon(
                           Icons.search,
                           size: 14,
@@ -129,46 +133,21 @@ class _HomePageState extends State<HomePage> {
             Row(
               children: [
                 SizedBox(
-                  width: 18,
+                  width: 24,
                   child: RotatedBox(
                     quarterTurns: 3,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          height: 18,
-                          margin: const EdgeInsets.only(right: 37),
-                          child: Text(
-                            'All',
-                            style: blackTextStyle.copyWith(
-                              fontSize: 12,
-                              fontWeight: bold,
-                            ),
-                          ),
-                        ),
-                        Container(
-                          height: 18,
-                          margin: const EdgeInsets.only(right: 37),
-                          child: Text(
-                            'Latest',
-                            style: blackTextStyle.copyWith(
-                              fontSize: 12,
-                              fontWeight: bold,
-                            ),
-                          ),
-                        ),
-                        Container(
-                          height: 18,
-                          margin: const EdgeInsets.only(right: 28),
-                          child: Text(
-                            'Popular',
-                            style: blackTextStyle.copyWith(
-                              fontSize: 12,
-                              fontWeight: bold,
-                            ),
-                          ),
-                        ),
-                      ],
+                    child: BlocBuilder<TravelCubit, int>(
+                      builder: (context, state) {
+                        return Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          // ignore: prefer_const_literals_to_create_immutables
+                          children: [
+                            MenuTravelNavigationItem(index: 0, menu: 'All'),
+                            MenuTravelNavigationItem(index: 1, menu: 'Latest'),
+                            MenuTravelNavigationItem(index: 2, menu: 'Popular')
+                          ],
+                        );
+                      },
                     ),
                   ),
                 ),
