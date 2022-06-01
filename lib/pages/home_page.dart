@@ -62,33 +62,38 @@ class _HomePageState extends State<HomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Container(
-                  width: 235,
-                  height: 54,
-                  decoration: BoxDecoration(
-                    color: kLightGreyColor,
-                    borderRadius: BorderRadius.circular(21),
-                  ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/search-page');
+                  },
                   child: Container(
-                    margin: const EdgeInsets.symmetric(
-                      vertical: 20,
-                      horizontal: 21,
+                    width: 235,
+                    height: 54,
+                    decoration: BoxDecoration(
+                      color: kLightGreyColor,
+                      borderRadius: BorderRadius.circular(21),
                     ),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.search,
-                          size: 14,
-                        ),
-                        const SizedBox(width: 11),
-                        Text(
-                          'Search Places',
-                          style: greyTextStyle.copyWith(
-                            fontSize: 11,
+                    child: Container(
+                      margin: const EdgeInsets.symmetric(
+                        vertical: 20,
+                        horizontal: 21,
+                      ),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.search,
+                            size: 14,
                           ),
-                        )
-                      ],
+                          const SizedBox(width: 11),
+                          Text(
+                            'Search Places',
+                            style: greyTextStyle.copyWith(
+                              fontSize: 11,
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),

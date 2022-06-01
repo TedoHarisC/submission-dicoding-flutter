@@ -6,6 +6,7 @@ import 'package:submission_dicoding_tedo_hc/pages/home_page.dart';
 import 'package:submission_dicoding_tedo_hc/pages/main_page.dart';
 import 'package:submission_dicoding_tedo_hc/pages/onboarding_page.dart';
 import 'package:submission_dicoding_tedo_hc/pages/profil_page.dart';
+import 'package:submission_dicoding_tedo_hc/pages/search_page.dart';
 import 'package:submission_dicoding_tedo_hc/pages/sign_in_page.dart';
 import 'package:submission_dicoding_tedo_hc/pages/splash_page.dart';
 import 'package:submission_dicoding_tedo_hc/pages/wishlist_page.dart';
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
           '/home': (context) => const HomePage(),
           '/wishlist': (context) => const WishlistPage(),
           '/profil': (context) => const ProfilPage(),
+          '/search-page': (context) => const SearchPage(),
         },
       ),
     );
