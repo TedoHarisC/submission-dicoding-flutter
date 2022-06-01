@@ -25,21 +25,21 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
               items: const [
                 OnBoardingItem(
                   imageUrl: 'assets/onboarding1-picture.png',
-                  title: 'Buy Furniture Easily',
+                  title: 'Jelajahi Dunia',
                   subtitle:
-                      'Aliqua id fugiat nostrud irure ex duis ea \nquis id quis ad et. Sunt qui esse',
+                      'Pilih destinasi wisata mu seluruh dunia di dalam satu aplikasi',
                 ),
                 OnBoardingItem(
                   imageUrl: 'assets/onboarding2-picture.png',
-                  title: 'Fast Delivery',
+                  title: 'Pemesanan Mudah',
                   subtitle:
-                      'Aliqua id fugiat nostrud irure ex duis ea \nquis id quis ad et. Sunt qui esse',
+                      'Pemesanan perjalanan yang mudah, hanya dengan santai di rumah',
                 ),
                 OnBoardingItem(
                   imageUrl: 'assets/onboarding3-picture.png',
-                  title: 'Best Price',
+                  title: 'Fitur Lengkap',
                   subtitle:
-                      'Aliqua id fugiat nostrud irure ex duis ea \nquis id quis ad et. Sunt qui esse',
+                      'Fitur lengkap aplikasi memudahkan mu dalam pemesanan liburanmu',
                 ),
               ],
               options: CarouselOptions(
