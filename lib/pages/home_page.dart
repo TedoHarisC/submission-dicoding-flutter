@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           Text(
-            'Hello Vaninska',
+            'Hello Admin',
             style: blackTextStyle.copyWith(
               fontSize: 15,
               fontWeight: semiBold,
