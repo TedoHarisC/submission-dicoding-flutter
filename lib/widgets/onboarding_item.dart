@@ -21,15 +21,12 @@ class OnBoardingItem extends StatelessWidget {
       child: Column(
         children: [
           const SizedBox(height: 100),
-          Image.asset(
-            imageUrl,
-            width: double.infinity,
-          ),
-          const SizedBox(height: 127),
+          Image.asset(imageUrl, width: double.infinity, height: 250),
+          const SizedBox(height: 77),
           Text(
             title,
             style: blackTextStyle.copyWith(
-              fontSize: 26,
+              fontSize: 22,
             ),
           ),
           const SizedBox(height: 10),
