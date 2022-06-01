@@ -4,7 +4,6 @@ import 'package:submission_dicoding_tedo_hc/cubit/page_cubit.dart';
 import 'package:submission_dicoding_tedo_hc/cubit/travel_cubit.dart';
 import 'package:submission_dicoding_tedo_hc/pages/home_page.dart';
 import 'package:submission_dicoding_tedo_hc/pages/main_page.dart';
-import 'package:submission_dicoding_tedo_hc/pages/notification_page.dart';
 import 'package:submission_dicoding_tedo_hc/pages/onboarding_page.dart';
 import 'package:submission_dicoding_tedo_hc/pages/profil_page.dart';
 import 'package:submission_dicoding_tedo_hc/pages/sign_in_page.dart';
@@ -37,7 +36,6 @@ class MyApp extends StatelessWidget {
           '/sign-in': (context) => const SignInPage(),
           '/main': (context) => const MainPage(),
           '/home': (context) => const HomePage(),
-          '/notification': (context) => const NotificationPage(),
           '/wishlist': (context) => const WishlistPage(),
           '/profil': (context) => const ProfilPage(),
         },

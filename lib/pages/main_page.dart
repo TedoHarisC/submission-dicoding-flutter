@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:submission_dicoding_tedo_hc/cubit/page_cubit.dart';
 import 'package:submission_dicoding_tedo_hc/pages/home_page.dart';
-import 'package:submission_dicoding_tedo_hc/pages/notification_page.dart';
 import 'package:submission_dicoding_tedo_hc/pages/profil_page.dart';
 import 'package:submission_dicoding_tedo_hc/pages/wishlist_page.dart';
 import 'package:submission_dicoding_tedo_hc/theme.dart';
@@ -20,10 +19,8 @@ class MainPage extends StatelessWidget {
         case 0:
           return const HomePage();
         case 1:
-          return const NotificationPage();
-        case 2:
           return const WishlistPage();
-        case 3:
+        case 2:
           return const ProfilPage();
         default:
           return const HomePage();
@@ -49,16 +46,12 @@ class MainPage extends StatelessWidget {
                 imageUrl: 'assets/icon_home.png',
               ),
               CustomButtonNavigationItem(
-                imageUrl: 'assets/icon_notification.png',
+                imageUrl: 'assets/icon_wishlist.png',
                 index: 1,
               ),
               CustomButtonNavigationItem(
-                imageUrl: 'assets/icon_wishlist.png',
-                index: 2,
-              ),
-              CustomButtonNavigationItem(
                 imageUrl: 'assets/icon_profile.png',
-                index: 3,
+                index: 2,
               ),
             ],
           ),
