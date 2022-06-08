@@ -1,6 +1,15 @@
 # submission_dicoding_tedo_hc
 
-A new Flutter project.
+Project untuk memenuhi submission dicoding pada kelas Belajar Membuat Flutter Basic 
+
+Code By : Tedo Haris C
+Design By : [NickleFox](https://www.figma.com/@nickelfox)
+
+Star⭐ the repo if you like.
+
+## 📸 ScreenShots
+
+<img src="ss/1.png"/>
 
 ## Getting Started
 
